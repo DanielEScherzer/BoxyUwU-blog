@@ -258,7 +258,7 @@ In this example if we dynamically link crate `b` to crate `c` there would be no 
 There are other issues with this approach:
 1. Meaningfully harms library evolution.
     If binary crates ubiquitously add an impl of a standard library trait for a standard library type then in practice it would be too breaking for std to ever add such an impl itself even though it's "ok" to do so. Similarly for ecosystem crates which take stability seriously.
-2. Doesn't solve the ecosystem evolution problem
+2. Doesn't solve the ecosystem evolution problem.
     Even though this is meaningful in its ability to work around coherence, it's still a relatively small increase in flexibility. We should expect that even with this proposal the ecosystem evolution problem will remain.
 
 ### Deferred Coherence
